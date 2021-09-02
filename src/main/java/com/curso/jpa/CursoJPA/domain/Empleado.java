@@ -28,8 +28,17 @@ public class Empleado implements Serializable {
 	@Column(name = "HIRE_DATA")
 	private Date fechaContratacion; // java.util.Date
 
-	@Column(name = "JOB_ID")
-	private String idTrabajo;
+	//@Column(name = "JOB_ID")
+	//private String idTrabajo;
+	
+	//@OneToOne
+	//@JoinColumn(name = "JOB_ID")
+	//private Trabajo trabajo;
+	
+	@ManyToOne
+	@JoinColumn(name = "JOB_ID")
+	private Trabajo trabajo;
+	
 
 	@Column(name = "SALARY")
 	private Double salario;
@@ -92,14 +101,14 @@ public class Empleado implements Serializable {
 		this.fechaContratacion = fechaContratacion;
 	}
 
-	public String getIdTrabajo() {
-		return idTrabajo;
+	public Trabajo getTrabajo() {
+		return trabajo;
 	}
-
-	public void setIdTrabajo(String idTrabajo) {
-		this.idTrabajo = idTrabajo;
+	
+	public void setTrabajo(Trabajo trabajo) {
+		this.trabajo = trabajo;
 	}
-
+	
 	public Double getSalario() {
 		return salario;
 	}
@@ -132,13 +141,7 @@ public class Empleado implements Serializable {
 		this.idDepartamento = idDepartamento;
 	}
 
-	@Override
-	public String toString() {
-		return "Empleado [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email
-				+ ", telefono=" + telefono + ", fechaContratacion=" + fechaContratacion + ", idTrabajo=" + idTrabajo
-				+ ", salario=" + salario + ", comision=" + comision + ", idManager=" + idManager + ", idDepartamento="
-				+ idDepartamento + "]";
-	}
+	
 
 	@Override
 	public int hashCode() {
