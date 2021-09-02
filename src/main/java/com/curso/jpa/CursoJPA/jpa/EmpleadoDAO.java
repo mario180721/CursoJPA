@@ -1,5 +1,7 @@
 package com.curso.jpa.CursoJPA.jpa;
 
+import java.awt.List;
+
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -78,9 +80,16 @@ public class EmpleadoDAO {
 		
 		EntityManager em = factory.createEntityManager();
 		Trabajo t = em.find(Trabajo.class, codigo);
+		
+		System.out.println("Lista trabajadores trabnajo " + t.getTituloTrabajo());
+		System.out.println("lista empleados");
+		java.util.List<Empleado> l  = t.getColeccionEmpleados();
+		for(Empleado e: l) {
+			System.out.println(e.getNombre());
+		}
 		return t;
 	
-	}
+	}//fin getTrabajo
 	
 	
 	
@@ -107,7 +116,7 @@ public class EmpleadoDAO {
 //		e.setNombre("Luis");
 //		e.setApellidos("Ramos");
 //		//e.setComision(n);
-//		e.setEmail("");
+//		e.setEmail("lr");
 //		e.setFechaContratacion(new java.util.Date());
 //		e.setIdDepartamento(100); //101  fk
 //		//e.setIdManager(null);
@@ -142,6 +151,9 @@ public class EmpleadoDAO {
 		System.out.println("Nombre "  + e.getNombre());
 		
 		System.out.println("Trabajo " + e.getTrabajo().getTituloTrabajo());
+		
+		
+		Trabajo tADPress = dao.getTrabajo("AD_PRES");
 		
 		
 	}

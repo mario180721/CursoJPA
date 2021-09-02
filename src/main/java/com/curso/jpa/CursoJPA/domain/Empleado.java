@@ -25,7 +25,7 @@ public class Empleado implements Serializable {
 	private String telefono;
 
 	@Temporal(TemporalType.DATE) // javax.persistence.Temporal
-	@Column(name = "HIRE_DATA")
+	@Column(name = "HIRE_DATE")
 	private Date fechaContratacion; // java.util.Date
 
 	//@Column(name = "JOB_ID")
@@ -42,7 +42,7 @@ public class Empleado implements Serializable {
 
 	@Column(name = "SALARY")
 	private Double salario;
-	@Column(name = "COMISSION_PCT")
+	@Column(name = "COMMISSION_PCT")
 	private Double comision;
 	@Column(name = "MANAGER_ID")
 	private Long idManager;
