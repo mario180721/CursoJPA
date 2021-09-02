@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Thu Sep 02 10:59:51 CEST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-017b-a5bc-6028-00000f1ff678 
+on database directory /Users/begonaolea/TICONTRACK Dropbox/Begoña Olea/008_CURSO_JAVAANGULAR_WHITEAMCONSULTING/proyectos_eclipse/CursoJPA/simpleDb  with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@6e5e91e4 
+Loaded from file:/Users/begonaolea/.m2/repository/org/apache/derby/derby/10.8.2.2/derby-10.8.2.2.jar
+java.vendor=Oracle Corporation
+java.runtime.version=16.0.2+7-67
+user.dir=/Users/begonaolea/TICONTRACK Dropbox/Begoña Olea/008_CURSO_JAVAANGULAR_WHITEAMCONSULTING/proyectos_eclipse/CursoJPA
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
