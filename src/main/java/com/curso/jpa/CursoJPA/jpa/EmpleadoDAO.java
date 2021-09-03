@@ -8,6 +8,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import org.apache.derby.tools.sysinfo;
+
 import com.curso.jpa.CursoJPA.domain.Empleado;
 import com.curso.jpa.CursoJPA.domain.Trabajo;
 
@@ -108,6 +110,13 @@ public class EmpleadoDAO {
 	
 	
 	
+	public List <Empleado> getAllEmpleado() {
+		
+	}
+	
+	
+	
+	
 	public static void main(String[] args) {
 //		
 		EmpleadoDAO dao = new EmpleadoDAO();
@@ -155,6 +164,13 @@ public class EmpleadoDAO {
 		
 		Trabajo tADPress = dao.getTrabajo("AD_PRES");
 		
+		
+		System.out.println("trabajo"+tADPress.getTituloTrabajo());
+		
+		for (Empleado string : tADPress.getColeccionEmpleados()) {
+			
+			System.out.println(e.getNombre());
+		}
 		
 	}
 	
